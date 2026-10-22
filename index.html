@@ -1,0 +1,262 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Zayan Sheikh</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: one narrow editorial column. Name set large like a port manifest header, work listed as ledger rows, no cards. */
+:root {
+  --bg: #eef1f2;
+  --surface: #e3e8ea;
+  --fg: #10202a;
+  --muted: #4b5e69;
+  --line: #c4cdd2;
+  --accent: #c2410c;
+  --accent-fg: #ffffff;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c171e; --surface: #14232d; --fg: #e6edf0; --muted: #9ab0bb; --line: #263946; --accent: #fb8a4b; --accent-fg: #1a0c04;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c171e; --surface: #14232d; --fg: #e6edf0; --muted: #9ab0bb; --line: #263946; --accent: #fb8a4b; --accent-fg: #1a0c04;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.6;
+  padding-block: 20px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 920px; margin: 0 auto; }
+a { color: inherit; text-decoration-color: var(--accent); text-underline-offset: 3px; text-decoration-thickness: 2px; }
+a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-bottom: 14px; border-bottom: 1px solid var(--line); font-family: var(--mono); font-size: 13px; color: var(--muted); }
+.top nav { display: flex; gap: 18px; flex-wrap: wrap; }
+.top nav a { text-decoration: none; }
+.top nav a:hover { color: var(--accent); }
+.clock { display: inline-flex; gap: 8px; align-items: center; }
+.clock b { color: var(--fg); font-weight: 500; font-variant-numeric: tabular-nums; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: inline-block; }
+.theme { font: inherit; background: none; border: 1px solid var(--line); color: var(--muted); padding: 3px 10px; cursor: pointer; border-radius: 3px; }
+.theme:hover { color: var(--fg); border-color: var(--muted); }
+
+.hero { padding-block: 56px 48px; }
+.status { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; color: var(--muted); margin-bottom: 22px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(44px, 10vw, 104px); line-height: 0.95; letter-spacing: -0.03em; margin: 0 0 24px; text-wrap: balance; }
+h1 span { color: var(--accent); }
+.lede { font-size: clamp(18px, 2.4vw, 22px); max-width: 34em; margin: 0 0 28px; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 11px 20px; font-weight: 600; text-decoration: none; border-radius: 3px; border: 2px solid var(--fg); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.btn.primary:hover { color: var(--accent-fg); filter: brightness(1.08); }
+.btn.ghost:hover { background: var(--fg); color: var(--bg); }
+
+section { padding-block: 40px; border-top: 1px solid var(--line); }
+.label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin: 0 0 8px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: clamp(28px, 4.5vw, 40px); line-height: 1.1; letter-spacing: -0.02em; margin: 0 0 28px; text-wrap: balance; }
+
+.work { list-style: none; margin: 0; padding: 0; }
+.work li { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 8px 32px; padding-block: 22px; border-top: 1px solid var(--line); }
+.work li:first-child { border-top: 0; padding-top: 0; }
+.work h3 { font-family: var(--display); font-size: 22px; font-weight: 700; line-height: 1.2; margin: 0 0 6px; }
+.work .stack { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin: 0; }
+.work p { margin: 0 0 10px; }
+.links { display: flex; gap: 16px; flex-wrap: wrap; font-family: var(--mono); font-size: 13px; }
+.tag { display: inline-block; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; background: var(--accent); color: var(--accent-fg); padding: 1px 7px; border-radius: 2px; margin-left: 8px; vertical-align: 3px; }
+
+.skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+.skills h3 { font-family: var(--mono); font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; }
+.skills ul { list-style: none; margin: 0; padding: 0; }
+.skills li { padding-block: 8px; border-top: 1px solid var(--line); font-weight: 500; }
+
+.about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 16px 32px; }
+.about h2 { margin: 0; }
+.about p { margin: 0 0 14px; max-width: 36em; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; font-size: 15px; margin: 22px 0 0; }
+.facts dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.facts dd { margin: 0; }
+
+.contact { background: var(--surface); padding: 36px max(16px, 4vw); border-radius: 4px; border-top: 0; margin-top: 24px; }
+.contact h2 { margin-bottom: 12px; }
+.contact p { margin: 0 0 22px; max-width: 32em; }
+.channels { display: flex; flex-wrap: wrap; gap: 10px 22px; font-family: var(--mono); font-size: 14px; }
+footer { padding-top: 28px; font-family: var(--mono); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .hero { padding-block: 36px 32px; }
+  .work li, .about { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .btn, a { transition: color .15s, background .15s, filter .15s; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="clock"><span class="dot" aria-hidden="true"></span>Karachi <b id="clock">--:--</b> PKT</span>
+    <nav aria-label="Sections">
+      <a href="https://github.com/zyanshykh" target="_blank" rel="noopener">GitHub</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme</button>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="status"><span class="dot" aria-hidden="true"></span>Available for freelance projects</p>
+      <h1>Zayan <span>Sheikh</span></h1>
+      <p class="lede">Frontend developer in Karachi. I build web apps with Next.js and TypeScript, and I am working on AI-powered projects.</p>
+      <div class="cta">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/m-zayyan-sheikh-a19850266/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+
+    <section id="work">
+      <p class="label">Selected work</p>
+      <h2>Projects you can open and click through</h2>
+      <ul class="work">
+        <li>
+          <div>
+            <h3>Foodpanda Clone <span class="tag">Live</span></h3>
+            <p class="stack">Food-delivery interface</p>
+          </div>
+          <div>
+            <p>An ordering interface modelled on a food-delivery app. A good starting point for restaurant and delivery businesses that need a storefront.</p>
+            <div class="links"><a href="https://foodpanda-clone-boilerplate.vercel.app/" target="_blank" rel="noopener">Live demo</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Next.js AI Dashboard</h3>
+            <p class="stack">Next.js · TypeScript · Tailwind CSS</p>
+          </div>
+          <div>
+            <p>A modern dashboard with AI-powered automation tools. It shows how I structure a typed Next.js app with a clean, responsive interface.</p>
+            <div class="links"><a href="https://github.com/zyanshykh/nextjs-ai-dashboard" target="_blank" rel="noopener">Source on GitHub</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Multi-Agent AI Handbook</h3>
+            <p class="stack">Docusaurus · Mermaid</p>
+          </div>
+          <div>
+            <p>An interactive documentation site for learning multi-agent AI systems, with Mermaid diagrams that explain how the agents connect.</p>
+            <div class="links"><a href="https://github.com/zyanshykh/book" target="_blank" rel="noopener">Source on GitHub</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>July Tracker</h3>
+            <p class="stack">HTML · CSS · JavaScript</p>
+          </div>
+          <div>
+            <p>A small tracker built with plain web technologies, showing the fundamentals behind the larger apps.</p>
+            <div class="links"><a href="https://github.com/zyanshykh/july-tracker" target="_blank" rel="noopener">Source on GitHub</a></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Static Resume</h3>
+            <p class="stack">HTML · CSS · TypeScript</p>
+          </div>
+          <div>
+            <p>My first resume site, with a clean structure and responsive styling. This page is its successor.</p>
+            <div class="links"><a href="https://github.com/zyanshykh/Milestone-1" target="_blank" rel="noopener">Source on GitHub</a></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <p class="label">Skills</p>
+      <h2>What I build with</h2>
+      <div class="skills">
+        <div>
+          <h3>Daily tools</h3>
+          <ul><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
+        </div>
+        <div>
+          <h3>Foundations</h3>
+          <ul><li>HTML and CSS</li><li>JavaScript</li><li>Responsive layouts</li></ul>
+        </div>
+        <div>
+          <h3>Learning now</h3>
+          <ul><li>Python</li><li>Multi-agent AI systems</li><li>Docusaurus docs sites</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div>
+        <p class="label">About</p>
+        <h2>Learning in public, shipping as I go</h2>
+      </div>
+      <div>
+        <p>I teach myself by building. My GitHub holds 47 public repositories, from Python basics to full Next.js apps, and every project here is live or open to read.</p>
+        <p>I am building towards my own startup, so I like freelance work where I talk to the business owner directly and understand what the product has to do.</p>
+        <dl class="facts">
+          <dt>Based in</dt><dd>Karachi, Pakistan</dd>
+          <dt>Focus</dt><dd>Frontend, Next.js, TypeScript</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <p class="label">Contact</p>
+      <h2>Have a website or app to build?</h2>
+      <p>Send me a short note about what you need. I reply with how I would approach it and a realistic timeline.</p>
+      <div class="channels">
+        <a href="https://www.linkedin.com/in/m-zayyan-sheikh-a19850266/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/zyanshykh" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/ShykhZyan57112" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://www.youtube.com/@Zyanshykh" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Zayan Sheikh · Karachi</span>
+    <span>Last updated October 2026</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var el = document.getElementById('clock');
+  function tick() {
+    try {
+      el.textContent = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Karachi' }).format(new Date());
+    } catch (e) { el.textContent = ''; }
+  }
+  tick(); setInterval(tick, 20000);
+
+  var root = document.documentElement;
+  var btn = document.getElementById('theme');
+  btn.addEventListener('click', function () {
+    var current = root.getAttribute('data-theme');
+    if (!current) current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  });
+})();
+</script>
+
+</body></html>
